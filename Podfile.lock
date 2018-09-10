@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
+  - OAuthSwift (1.1.2)
+  - OAuthSwiftAlamofire (0.2.0):
+    - Alamofire
+    - OAuthSwift
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - AlamofireImage (~> 3.1)
+  - OAuthSwift (~> 1.1.0)
+  - OAuthSwiftAlamofire
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - OAuthSwift
+    - OAuthSwiftAlamofire
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  OAuthSwift: 5aa5659984d3ca3206ba636a9e7a9c6626b2e8bd
+  OAuthSwiftAlamofire: e51f11ff579dd4293bfe2a1a24c658caad4dac35
+
+PODFILE CHECKSUM: 72bf52d6cceaefc885edfb4a20963b8ea07e318e
+
+COCOAPODS: 1.5.3
