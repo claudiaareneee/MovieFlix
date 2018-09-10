@@ -23,7 +23,8 @@ The following **stretch** user stories are implemented:
 - [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete (+2pt)
 
 The following **additional** user stories are implemented:
-I added constraints to the layout so that this app would look good on different models
+
+- [ ] I added constraints to the layout so that this app would look good on different models
 - [ ] List anything else that you can get done to improve the app functionality! (+1-3pts)
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
@@ -35,7 +36,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://imgur.com/a/aMPyIXH' title='MovieFlix Walkthrough' width='' alt='MovieFlix Walkthrough' />
+<img src='https://i.imgur.com/gKpjCZE.gif' title='MovieFlix Walkthrough' width='' alt='MovieFlix Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
