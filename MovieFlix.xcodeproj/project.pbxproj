@@ -14,6 +14,7 @@
 		499A52C3214201560040408D /* MovieFlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A52C2214201560040408D /* MovieFlixTests.swift */; };
 		499A52CE214201560040408D /* MovieFlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A52CD214201560040408D /* MovieFlixUITests.swift */; };
 		499A52DE2143041C0040408D /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A52DD2143041C0040408D /* NowPlayingViewController.swift */; };
+		49C3E042214737CB00C02DB0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C3E041214737CB00C02DB0 /* DetailViewController.swift */; };
 		49F39673214476A4003C863E /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F39672214476A4003C863E /* MovieCell.swift */; };
 		69C3F08E0BD2E71067A5F66A /* Pods_MovieFlix_MovieFlixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178503BA36B5B0F134A29042 /* Pods_MovieFlix_MovieFlixTests.framework */; };
 		75441A9608B2158080C1BF99 /* Pods_MovieFlixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613AC396501D0F54B82EDEB3 /* Pods_MovieFlixUITests.framework */; };
@@ -53,6 +54,7 @@
 		499A52CD214201560040408D /* MovieFlixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFlixUITests.swift; sourceTree = "<group>"; };
 		499A52CF214201560040408D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		499A52DD2143041C0040408D /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
+		49C3E041214737CB00C02DB0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		49F39672214476A4003C863E /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		60C0AD90858198468B494161 /* Pods-MovieFlixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieFlixUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieFlixUITests/Pods-MovieFlixUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		613AC396501D0F54B82EDEB3 /* Pods_MovieFlixUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieFlixUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,13 +118,13 @@
 		499A52AC214201550040408D /* MovieFlix */ = {
 			isa = PBXGroup;
 			children = (
+				49C3E0402147377100C02DB0 /* Views */,
+				49C3E03F2147376500C02DB0 /* ViewControllers */,
 				499A52AD214201550040408D /* AppDelegate.swift */,
-				499A52DD2143041C0040408D /* NowPlayingViewController.swift */,
 				499A52B1214201550040408D /* Main.storyboard */,
 				499A52B4214201560040408D /* Assets.xcassets */,
 				499A52B6214201560040408D /* LaunchScreen.storyboard */,
 				499A52B9214201560040408D /* Info.plist */,
-				49F39672214476A4003C863E /* MovieCell.swift */,
 			);
 			path = MovieFlix;
 			sourceTree = "<group>";
@@ -143,6 +145,23 @@
 				499A52CF214201560040408D /* Info.plist */,
 			);
 			path = MovieFlixUITests;
+			sourceTree = "<group>";
+		};
+		49C3E03F2147376500C02DB0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				499A52DD2143041C0040408D /* NowPlayingViewController.swift */,
+				49C3E041214737CB00C02DB0 /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		49C3E0402147377100C02DB0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49F39672214476A4003C863E /* MovieCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5281DD7CF99E46F6D358E6C5 /* Pods */ = {
@@ -323,16 +342,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MovieFlix/Pods-MovieFlix-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
@@ -412,6 +427,7 @@
 				499A52DE2143041C0040408D /* NowPlayingViewController.swift in Sources */,
 				499A52AE214201550040408D /* AppDelegate.swift in Sources */,
 				49F39673214476A4003C863E /* MovieCell.swift in Sources */,
+				49C3E042214737CB00C02DB0 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
