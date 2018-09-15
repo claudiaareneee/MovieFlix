@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movies-->
+        <!--Now Playing-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NowPlayingViewController" customModule="MovieFlix" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Movies" id="Swk-aj-yFi"/>
+                    <navigationItem key="navigationItem" title="Now Playing" id="Swk-aj-yFi"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Jo4-FV-ugz" id="IEF-QD-0vQ"/>
                         <outlet property="tableView" destination="GrG-yz-5Ob" id="xgX-Au-EKk"/>
@@ -174,6 +174,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2OI-Ge-57c" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mVx-ZK-e1a">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -186,17 +187,62 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="109.29535232383809"/>
         </scene>
-        <!--View Controller-->
+        <!--Superhero Movies-->
         <scene sceneID="YSJ-pb-uk2">
             <objects>
-                <viewController id="KLZ-Ph-AKp" sceneMemberID="viewController">
+                <viewController id="KLZ-Ph-AKp" customClass="SuperheroViewController" customModule="MovieFlix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="06T-Kb-P2R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xPS-5J-r9c">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="ja1-YE-575">
+                                    <size key="itemSize" width="125" height="191"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PosterCell" id="dSz-OX-ZDu" customClass="PosterCell" customModule="MovieFlix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="191"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="191"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Yy-fF-m62">
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="191"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="1Yy-fF-m62" secondAttribute="trailing" id="0LJ-u4-r7S"/>
+                                            <constraint firstItem="1Yy-fF-m62" firstAttribute="leading" secondItem="dSz-OX-ZDu" secondAttribute="leading" id="ONT-Dd-8d9"/>
+                                            <constraint firstAttribute="bottom" secondItem="1Yy-fF-m62" secondAttribute="bottom" id="UiQ-lf-mIg"/>
+                                            <constraint firstItem="1Yy-fF-m62" firstAttribute="top" secondItem="dSz-OX-ZDu" secondAttribute="top" id="ZZk-Ni-x9Q"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="posterImageView" destination="1Yy-fF-m62" id="QbY-P2-ATZ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ixI-LP-455" firstAttribute="bottom" secondItem="xPS-5J-r9c" secondAttribute="bottom" id="WfF-S2-oeO"/>
+                            <constraint firstItem="xPS-5J-r9c" firstAttribute="leading" secondItem="ixI-LP-455" secondAttribute="leading" id="bUw-e3-7SS"/>
+                            <constraint firstItem="ixI-LP-455" firstAttribute="trailing" secondItem="xPS-5J-r9c" secondAttribute="trailing" id="kQ3-Y3-mvl"/>
+                            <constraint firstItem="xPS-5J-r9c" firstAttribute="top" secondItem="ixI-LP-455" secondAttribute="top" id="zfc-45-sBc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ixI-LP-455"/>
                     </view>
-                    <navigationItem key="navigationItem" id="X4c-xB-LoB"/>
+                    <navigationItem key="navigationItem" title="Superhero Movies" id="X4c-xB-LoB"/>
+                    <connections>
+                        <outlet property="collectionView" destination="xPS-5J-r9c" id="XFG-oM-BGy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5Z-Ni-ULQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
