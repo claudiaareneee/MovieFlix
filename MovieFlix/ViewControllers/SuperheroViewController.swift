@@ -18,18 +18,14 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
 
         collectionView.dataSource = self
 
+        //Adjusting the collection view layout to be dynamic
         let layout =  collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let cellsPerLine: CGFloat = 2
         layout.minimumInteritemSpacing = 2
         layout.minimumLineSpacing = layout.minimumInteritemSpacing
         let interItemSpacing = layout.minimumInteritemSpacing * (cellsPerLine - 1)
         let width = collectionView.frame.size.width/cellsPerLine - interItemSpacing/cellsPerLine
-        
         layout.itemSize = CGSize(width: width, height: width * 3/2)
-        
-
-
-
 
         fetchMovies()
     }
@@ -52,7 +48,12 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func fetchMovies() {
-        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
+
+        //Now playing end point:
+        //let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
+
+        //]Super Hero (from the Ant Man and the Wasp id) end point:
+        let url = URL(string: "https://api.themoviedb.org/3/movie/363088/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
