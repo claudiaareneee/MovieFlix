@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="2015.2" y="109.29535232383809"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Details-->
         <scene sceneID="h4N-oP-rDy">
             <objects>
-                <viewController id="fxu-b6-ded" customClass="DetailViewController" customModule="MovieFlix" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Details" id="fxu-b6-ded" customClass="DetailViewController" customModule="MovieFlix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kfQ-cE-OaL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,8 +114,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcu-Ce-7br">
-                                <rect key="frame" x="16" y="400" width="343" height="247"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="343" translatesAutoresizingMaskIntoConstraints="NO" id="tcu-Ce-7br">
+                                <rect key="frame" x="16" y="400" width="343" height="218"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Release As Scott Lang awaits expiration of his term of house detention, Hope van Dyne and Dr. Hank Pym involve him in a scheme to rescue Mrs. van Dyne from the micro-universe into which she has fallen, while two groups of schemers converge on them with intentions of stealing Dr. Pym's inventions: </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -147,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wr-ld-WDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2682.4000000000001" y="108.39580209895054"/>
+            <point key="canvasLocation" x="2990" y="109"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="a1z-TJ-jJb">
@@ -225,6 +225,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="posterImageView" destination="1Yy-fF-m62" id="QbY-P2-ATZ"/>
+                                            <segue destination="fxu-b6-ded" kind="show" id="6fL-jU-2PU"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -246,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5Z-Ni-ULQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.8" y="788.45577211394311"/>
+            <point key="canvasLocation" x="1076" y="788"/>
         </scene>
         <!--Superhero Movies-->
         <scene sceneID="xla-4M-cgo">
@@ -272,4 +273,7 @@
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="L3b-Xy-s7y"/>
+    </inferredMetricsTieBreakers>
 </document>

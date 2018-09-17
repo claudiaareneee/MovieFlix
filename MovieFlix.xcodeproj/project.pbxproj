@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490D6A3D214F238F00C94726 /* SuperheroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D6A3C214F238F00C94726 /* SuperheroDetailViewController.swift */; };
 		49359D65214C0B680079F153 /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49359D64214C0B680079F153 /* SuperheroViewController.swift */; };
 		499A52AE214201550040408D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499A52AD214201550040408D /* AppDelegate.swift */; };
 		499A52B3214201550040408D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499A52B1214201550040408D /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		178503BA36B5B0F134A29042 /* Pods_MovieFlix_MovieFlixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieFlix_MovieFlixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B0C9F2847804D5BB35B7B80 /* Pods-MovieFlix-MovieFlixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieFlix-MovieFlixTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieFlix-MovieFlixTests/Pods-MovieFlix-MovieFlixTests.release.xcconfig"; sourceTree = "<group>"; };
+		490D6A3C214F238F00C94726 /* SuperheroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroDetailViewController.swift; sourceTree = "<group>"; };
 		49359D64214C0B680079F153 /* SuperheroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroViewController.swift; sourceTree = "<group>"; };
 		499A52AA214201550040408D /* MovieFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499A52AD214201550040408D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				499A52DD2143041C0040408D /* NowPlayingViewController.swift */,
 				49C3E041214737CB00C02DB0 /* DetailViewController.swift */,
 				49359D64214C0B680079F153 /* SuperheroViewController.swift */,
+				490D6A3C214F238F00C94726 /* SuperheroDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				499A52DE2143041C0040408D /* NowPlayingViewController.swift in Sources */,
 				49C3E044214B88D000C02DB0 /* PosterCell.swift in Sources */,
 				49359D65214C0B680079F153 /* SuperheroViewController.swift in Sources */,
+				490D6A3D214F238F00C94726 /* SuperheroDetailViewController.swift in Sources */,
 				499A52AE214201550040408D /* AppDelegate.swift in Sources */,
 				49F39673214476A4003C863E /* MovieCell.swift in Sources */,
 				49C3E042214737CB00C02DB0 /* DetailViewController.swift in Sources */,

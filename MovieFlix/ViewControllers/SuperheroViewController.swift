@@ -42,8 +42,6 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
             let posterURL = URL(string: baseURlString + posterPathString)!
             cell.posterImageView.af_setImage(withURL: posterURL)
         }
-        
-        // https://courses.codepath.com/course_videos/ios_university/youtu/hnZ9nhkqGhg?title=Collection+View+Setup 9:47
         return cell
     }
     
@@ -73,6 +71,15 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
             }
         }
         task.resume()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell =  sender as! UICollectionViewCell
+        if let indexPath = collectionView.indexPath(for: cell){
+            let movie = movies[indexPath.row]
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.movie = movie
+        }
     }
     
     override func didReceiveMemoryWarning() {
