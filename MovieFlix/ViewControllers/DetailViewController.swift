@@ -23,7 +23,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
-    @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var overviewTextView: UITextView!
     
     var movie: [String: Any]?
     
@@ -32,8 +32,9 @@ class DetailViewController: UIViewController {
 
         if let movie = movie{
             titleLabel.text = movie[MovieKeys.title] as? String
-            releaseDateLabel.text = movie[MovieKeys.releaseDate] as? String
-            overviewLabel.text = movie[MovieKeys.overview] as? String
+            releaseDateLabel.text = "Release date: \(movie[MovieKeys.releaseDate] as? String ?? "")"
+
+            overviewTextView.text = movie[MovieKeys.overview] as? String
             
             let backdropPathString = movie[MovieKeys.backdropPath] as! String
             let posterPathString = movie[MovieKeys.posterPath] as! String

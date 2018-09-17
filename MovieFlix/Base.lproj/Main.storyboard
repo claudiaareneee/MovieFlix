@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,15 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="190" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GrG-yz-5Ob">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="190" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GrG-yz-5Ob">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="187" id="t5q-ds-Ppo" customClass="MovieCell" customModule="MovieFlix" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="187" id="t5q-ds-Ppo" customClass="MovieCell" customModule="MovieFlix" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="187"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t5q-ds-Ppo" id="px1-ad-HnT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBg-wY-jYj">
@@ -35,14 +35,14 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <string key="text">As Scott Lang awaits expiration of his term of house detention, Hope van Dyne and Dr. Hank Pym involve him in a scheme to rescue Mrs. van Dyne from the micro-universe into which she has fallen, while two groups of schemers converge on them with intentions of stealing Dr. Pym's inventions</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ant-Man and the Wasp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arQ-YG-FHG">
                                                     <rect key="frame" x="113" y="11" width="248" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2d-iT-sEx">
@@ -52,6 +52,7 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="overviewLabel" destination="eBg-wY-jYj" id="R11-X3-vzf"/>
                                             <outlet property="posterImageView" destination="V2d-iT-sEx" id="Nm9-9A-kYb"/>
@@ -63,10 +64,10 @@
                             </tableView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Jo4-FV-ugz">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GrG-yz-5Ob" secondAttribute="bottom" id="8NY-6M-Dlo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GrG-yz-5Ob" secondAttribute="trailing" id="RRR-Ol-ttV"/>
@@ -97,49 +98,59 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JAc-xd-bEB">
                                 <rect key="frame" x="0.0" y="64" width="375" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="D7k-P3-KsJ"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7q-iL-tXx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7q-iL-tXx">
                                 <rect key="frame" x="16" y="166" width="117" height="188"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="188" id="BdP-c6-Ct9"/>
+                                    <constraint firstAttribute="width" constant="117" id="nnA-na-8Jz"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ant-Man and the Wasp" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-2u-yoM">
-                                <rect key="frame" x="183" y="264" width="176" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ant-Man and the Wasp" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-2u-yoM">
+                                <rect key="frame" x="141" y="264" width="218" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yFE-bd-eSH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80b-Ay-Uf5">
-                                <rect key="frame" x="183" y="292.5" width="176" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Release Date: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80b-Ay-Uf5">
+                                <rect key="frame" x="141" y="293" width="218" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="343" translatesAutoresizingMaskIntoConstraints="NO" id="tcu-Ce-7br">
-                                <rect key="frame" x="16" y="400" width="343" height="218"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8L-zm-0kX">
+                                <rect key="frame" x="16" y="362" width="343" height="245"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Release As Scott Lang awaits expiration of his term of house detention, Hope van Dyne and Dr. Hank Pym involve him in a scheme to rescue Mrs. van Dyne from the micro-universe into which she has fallen, while two groups of schemers converge on them with intentions of stealing Dr. Pym's inventions: </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JAc-xd-bEB" firstAttribute="trailing" secondItem="jpO-jQ-gM8" secondAttribute="trailing" id="6Kk-8i-5ca"/>
-                            <constraint firstItem="80b-Ay-Uf5" firstAttribute="top" secondItem="1sl-2u-yoM" secondAttribute="bottom" constant="8" symbolic="YES" id="7yB-Rr-hq4"/>
-                            <constraint firstItem="JAc-xd-bEB" firstAttribute="leading" secondItem="jpO-jQ-gM8" secondAttribute="leading" id="Dyr-uq-MNh"/>
-                            <constraint firstItem="1sl-2u-yoM" firstAttribute="trailing" secondItem="kfQ-cE-OaL" secondAttribute="trailingMargin" id="H9A-NR-hhu"/>
-                            <constraint firstItem="JAc-xd-bEB" firstAttribute="top" secondItem="jpO-jQ-gM8" secondAttribute="top" id="Q0f-Ct-blg"/>
-                            <constraint firstItem="jpO-jQ-gM8" firstAttribute="bottom" secondItem="JAc-xd-bEB" secondAttribute="bottom" constant="362" id="cOw-nW-87u"/>
-                            <constraint firstItem="1sl-2u-yoM" firstAttribute="top" secondItem="JAc-xd-bEB" secondAttribute="bottom" constant="8" symbolic="YES" id="fij-Ig-hyH"/>
-                            <constraint firstItem="1sl-2u-yoM" firstAttribute="leading" secondItem="80b-Ay-Uf5" secondAttribute="leading" id="o3M-GD-YGa"/>
-                            <constraint firstItem="1sl-2u-yoM" firstAttribute="trailing" secondItem="80b-Ay-Uf5" secondAttribute="trailing" id="t7c-fE-hDb"/>
+                            <constraint firstItem="1sl-2u-yoM" firstAttribute="leading" secondItem="I7q-iL-tXx" secondAttribute="trailing" constant="8" symbolic="YES" id="F2I-Fc-e7a"/>
+                            <constraint firstItem="I7q-iL-tXx" firstAttribute="top" secondItem="jpO-jQ-gM8" secondAttribute="top" constant="102" id="GhN-uT-TrF"/>
+                            <constraint firstItem="1sl-2u-yoM" firstAttribute="trailing" secondItem="80b-Ay-Uf5" secondAttribute="trailing" id="JvL-nD-8Dz"/>
+                            <constraint firstAttribute="trailing" secondItem="JAc-xd-bEB" secondAttribute="trailing" id="VeM-uA-YPE"/>
+                            <constraint firstItem="JAc-xd-bEB" firstAttribute="leading" secondItem="kfQ-cE-OaL" secondAttribute="leading" id="c7c-oR-wyE"/>
+                            <constraint firstItem="1sl-2u-yoM" firstAttribute="top" secondItem="JAc-xd-bEB" secondAttribute="bottom" constant="8" symbolic="YES" id="gU8-ai-nir"/>
+                            <constraint firstItem="JAc-xd-bEB" firstAttribute="top" secondItem="jpO-jQ-gM8" secondAttribute="top" id="kQ6-og-ajk"/>
+                            <constraint firstItem="1sl-2u-yoM" firstAttribute="leading" secondItem="80b-Ay-Uf5" secondAttribute="leading" id="n9T-ou-C4u"/>
+                            <constraint firstItem="80b-Ay-Uf5" firstAttribute="top" secondItem="1sl-2u-yoM" secondAttribute="bottom" constant="8" symbolic="YES" id="pwp-qk-Pjl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jpO-jQ-gM8"/>
                     </view>
                     <connections>
                         <outlet property="backDropImageView" destination="JAc-xd-bEB" id="AuL-fy-FpE"/>
-                        <outlet property="overviewLabel" destination="tcu-Ce-7br" id="5vb-oP-8Vh"/>
+                        <outlet property="overviewTextView" destination="I8L-zm-0kX" id="FGa-Kt-MEW"/>
                         <outlet property="posterImageView" destination="I7q-iL-tXx" id="mAB-i4-D12"/>
                         <outlet property="releaseDateLabel" destination="80b-Ay-Uf5" id="pAl-Xv-Ekh"/>
                         <outlet property="titleLabel" destination="1sl-2u-yoM" id="gcU-8b-iOg"/>
@@ -147,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wr-ld-WDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2990" y="109"/>
+            <point key="canvasLocation" x="2989.5999999999999" y="108.39580209895054"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="a1z-TJ-jJb">
@@ -197,7 +208,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xPS-5J-r9c">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="ja1-YE-575">
                                     <size key="itemSize" width="125" height="191"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -231,7 +242,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ixI-LP-455" firstAttribute="bottom" secondItem="xPS-5J-r9c" secondAttribute="bottom" id="WfF-S2-oeO"/>
                             <constraint firstItem="xPS-5J-r9c" firstAttribute="leading" secondItem="ixI-LP-455" secondAttribute="leading" id="bUw-e3-7SS"/>
