@@ -1,4 +1,4 @@
-# Project 1 - MovieFlix
+# Project 1 - *MovieFlix*
 
 **MovieFlix** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
@@ -66,7 +66,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 **MovieFlix** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **6** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
@@ -77,7 +77,7 @@ The following **required** functionality is completed:
 
 The following **stretch** features are implemented:
 
-- [ ] User can tap a poster in the collection view to see a detail screen of that movie (+3pts)
+- [x] User can tap a poster in the collection view to see a detail screen of that movie (+3pts)
 - [ ] In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer (+3pts)
 - [x] Customize the navigation bar (+1pt)
 - [ ] List in any optionals you didn't finish from last week (+1-3pts)
