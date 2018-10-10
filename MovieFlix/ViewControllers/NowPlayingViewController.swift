@@ -54,11 +54,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource{
                 let movieDictionaries = dataDictionary["results"] as! [[String: Any]]
                 self.movies = []
                 
-                for dictionary in movieDictionaries{
-                    let movie = Movie(dictionary: dictionary)
-                    self.movies.append(movie)
-                }
-                
+                self.movies = Movie.movies(dictionaries: movieDictionaries)
                 
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()

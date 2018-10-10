@@ -64,12 +64,7 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
                 let movieDictionaries = dataDictionary["results"] as! [[String: Any]]
-                self.movies = []
-                
-                for dictionary in movieDictionaries{
-                    let movie = Movie(dictionary: dictionary)
-                    self.movies.append(movie)
-                }
+                self.movies = Movie.movies(dictionaries: movieDictionaries)
                 
                 self.collectionView.reloadData()
 //                self.refreshControl.endRefreshing()

@@ -48,4 +48,14 @@ class Movie {
         
         // Set the rest of the properties
     }
+    
+    class func movies(dictionaries: [[String: Any]]) -> [Movie] {
+        var movies: [Movie] = []
+        for dictionary in dictionaries {
+            let movie = Movie(dictionary: dictionary)
+            movies.append(movie)
+        }
+        
+        return movies
+    }
 }
