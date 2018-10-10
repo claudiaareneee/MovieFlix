@@ -8,15 +8,6 @@
 
 import UIKit
 
-enum MovieKeys {
-    static let title = "title"
-    static let releaseDate = "release_date"
-    static let overview = "overview"
-    static let backdropPath = "backdrop_path"
-    static let posterPath = "poster_path"
-    static let baseURL = "https://image.tmdb.org/t/p/w500"
-}
-
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var backDropImageView: UIImageView!
@@ -26,31 +17,24 @@ class DetailViewController: UIViewController {
 //    @IBOutlet weak var overviewTextView: UITextView!
     @IBOutlet weak var overviewLabel: UILabel!
     
-    var movie: [String: Any]?
+    var movie: Movie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let movie = movie{
-            titleLabel.text = movie[MovieKeys.title] as? String
-            releaseDateLabel.text = "Release date: \(movie[MovieKeys.releaseDate] as? String ?? "")"
+            titleLabel.text = movie.title
+            releaseDateLabel.text = "Release date: \(String(describing: movie.releaseDate!))"
+            overviewLabel.text = movie.overview
+            
+            if let backdropURL = movie.backdropURL{
+                backDropImageView.af_setImage(withURL: backdropURL)
+            }
+            
+            if let posterURL = movie.posterUrl{
+                posterImageView.af_setImage(withURL: posterURL)
+            }
 
-//            overviewTextView.text = movie[MovieKeys.overview] as? String
-            overviewLabel.text = movie[MovieKeys.overview] as? String
-            
-            let backdropPathString = movie[MovieKeys.backdropPath] as! String
-            let posterPathString = movie[MovieKeys.posterPath] as! String
-            let baseURLString = MovieKeys.baseURL
-            
-            let backdropURL = URL(string: baseURLString + backdropPathString)!
-            backDropImageView.af_setImage(withURL: backdropURL)
-            
-            let posterURL = URL(string: baseURLString + posterPathString)!
-            posterImageView.af_setImage(withURL: posterURL)
-            
-            
-        
-            //
         }
     }
 
