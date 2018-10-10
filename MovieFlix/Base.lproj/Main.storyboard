@@ -354,6 +354,7 @@
                                             <outlet property="overviewLabel" destination="eQO-IJ-J9c" id="Aqz-OV-jbl"/>
                                             <outlet property="posterImageView" destination="9WY-sU-wJ1" id="ApP-6x-k9L"/>
                                             <outlet property="titleLabel" destination="knp-b3-Qtk" id="MJM-JL-wlC"/>
+                                            <segue destination="fxu-b6-ded" kind="show" id="Q9y-eV-Bgb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
